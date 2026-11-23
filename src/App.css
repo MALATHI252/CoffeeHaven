@@ -73,3 +73,26 @@
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+/* Coffee Haven Navbar */
+
+.navbar {
+    background-color: #2B1B14 !important;
+    padding: 18px 0;
+}
+
+.navbar .navbar-brand {
+    color: #FFFFFF !important;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: #F5EBDD !important;
+    font-size: 17px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #C58B55 !important;
+}

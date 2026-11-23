@@ -24,3 +24,10 @@ body {
 .navbar .nav-link {
   color: white;
 }
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #F5EBDD;
+    font-family: Arial, sans-serif;
+}
