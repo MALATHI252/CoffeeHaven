@@ -3,10 +3,11 @@ import{Link} from 'react-router-dom';
 function Login(){
     const[email,setEmail]=useState('');
     const[password,setPassword]=useState('');
+    const [showPassword,setShowPassword]=useState(false);
     function handleLogin(event){
         event.preventDefault();
         if (email===''||password===''){
-            alert("Please all the fiels");
+            alert("Please all the fields");
             return;
         }
         alert("Login form submitted successfully!");
@@ -16,10 +17,10 @@ function Login(){
             <div className='row justify-content-center'>
                 <div className='col-md-5'>
                     <div className='card shadow'>
-                    <div className='card-bofy p-4'>
+                    <div className='card-body p-4'>
                         <h2 className='text-center mb-4'>
                             Welcome Back</h2>
-                            <form onSubmit={{handleLogin}}>
+                            <form onSubmit={handleLogin}>
                                 <div className='mb-3'>
                                     <label className='form-label'>Email Address</label>
                                     <input type='email' className='form-control'placeholder='Enter your email'
@@ -27,9 +28,11 @@ function Login(){
                                 </div>
                                 <div className='mb-3'>
                                     <label className='form-label'>Password</label>
-                                    <input type='password' className='form-control'placeholder='Enter your password'value={password}
+                                    <input type={showPassword? "text":"password"} className='form-control'placeholder='Enter your password'value={password}
                                     onChange={(e)=>setPassword(e.target.value)}required/>         
-                                                           </div>
+                                                         
+                                                           <button type='button' className='btn btn-sm btn-outline-secondary mt-2' onClick={()=>setShowPassword(!showPassword)}>{showPassword?"Hide":"Show"}Password</button>
+                                                             </div>
                                                            <button type='submit'className='btn btn-warning w-100'>
                                                             Login
                                                            </button>

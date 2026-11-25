@@ -3,7 +3,7 @@ function Navbar({cartCount}) {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
         <div className="container">
-      <a className="navbar-brand" to="/">Coffee Haven</a>
+      <Link className="navbar-brand" to="/">Coffee Haven</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -19,6 +19,9 @@ function Navbar({cartCount}) {
     </li>
     <li className="nav-item">
       <Link className="nav-link"to="/cart"> 🛒 Cart ({cartCount})</Link>
+    </li>
+    <li className='nav-item'>
+      <Link className='nav-link'to='/login'>Login</Link>
     </li>
 
   </ul>
